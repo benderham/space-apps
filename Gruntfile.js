@@ -51,6 +51,15 @@ module.exports = function(grunt) {
     // Let's do some copying!
     copy: {
       
+      // SVGs
+      svg: {
+        files: [{
+          expand: true,
+          cwd: '<%= globalConfig.src %>/svg/',
+          src: ['**'], 
+          dest: '<%= globalConfig.build %>/svg'
+        }]
+      },
       // Favicons
       favicons: {
         files: [{
