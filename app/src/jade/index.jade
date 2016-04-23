@@ -28,27 +28,40 @@ html.no-js(lang='en')
   body
     header.page-head
       nav.page-nav
-        ul
-          li
-            a(href="#overview") Overview
-          li
-            a(href="#nasa") NASA Data
-          li
-            a(href="#social") Social Media
-          li
-            a(href="#news") News
+        ul.page-nav__list
+          li.page-nav__item
+            a(href="#overview" class="page-nav__link") Overview
+          li.page-nav__item
+            a(href="#nasa" class="page-nav__link") NASA Data
+          li.page-nav__item
+            a(href="#social" class="page-nav__link") Social Media
+          li.page-nav__item
+            a(href="#news" class="page-nav__link") News
     
     section#overview.container.overview
-      h1 Earth Overview
+      div.content
+        h1 Earth Overview
+        p Large Emoticon
+        p Earth's emotional status
+        p Search (Country)
+        p Spotify Playlist
 
     section#nasa.container.nasa
-      h1 NASA Data
+      div.content
+        h1 NASA Data
+        p Rainfall
+        p Temperature
+        p Natural Disaster Alert/Status
     
     section#social.container.social-media
-      h1 Social Media
+      div.content
+        h1 Social Media
+        p #globalwarming #climatechange etc... 
 
     section#news.container.news
-      h1 News
+      div.content
+        h1 News
+        p Google News thing...
 
     footer
   
