@@ -1,0 +1,44 @@
+
+/* Makiko */
+.input--makiko {
+  overflow: hidden;
+  background: #CBCBCB;
+}
+
+.input__field--makiko {
+  width: 100%;
+  background: transparent;
+  color: #797693;
+  z-index: 10;
+  font-weight: 500;
+}
+
+.input__label--makiko {
+  position: absolute;
+  width: 100%;
+  text-align: left;
+  pointer-events: none;
+  color: #fff;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 45%;
+    left: 20px;
+    background: url(../svg/search.svg) no-repeat center center;
+    background-size: 100%;
+    transition: transform 0.4s cubic-bezier(0.7,0,0.3,1);
+  }
+}
+
+.input__label-content--makiko {
+  display: block;
+  padding: 1.5em 0 0 2.75em;
+  transition: transform 0.4s cubic-bezier(0.7,0,0.3,1);
+}
+
+.input__field--makiko:focus + .input__label--makiko::before,
+.input--filled .input__label--makiko::before {
+  transform: scale3d(38, 38, 1);
+}
