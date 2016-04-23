@@ -1,0 +1,8 @@
+.earth-status {
+  text-align: center;
+}
+
+.earth-status__text {
+  color: $white; 
+  @include font-size(24px);
+}

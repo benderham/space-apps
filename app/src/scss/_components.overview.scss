@@ -1,6 +1,7 @@
 .overview {
   background: $primary-color;
-  padding-top: 60px;
+  //padding-top: 60px;
+  
   .layout__item{
     display: flex;
     flex-direction: column;
@@ -20,6 +21,7 @@
 
 .overview__heading {
   text-align: center;
+  color: $white;
 }
 
 .spotify__playlist{
