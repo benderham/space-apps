@@ -1,6 +1,8 @@
 body,
 html {
 	height: 100%;
+  font-family: $primary-font;
+  color: $primary-text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
