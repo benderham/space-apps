@@ -5,10 +5,37 @@
 }
 
 .page-nav__item {
-  margin: 0 15px;
+  margin: 0 30px;
   list-style: none;
 }
 
 .page-nav__link {
+  position: relative;
+  display: inline-block;
   text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:before {
+    display: inline-block;
+    opacity: 0;
+    margin-right: 10px;
+    content: '[';
+    transform: translateX(20px);
+    transition: transform 0.3s, opacity 0.2s;
+  }
+
+  &:after {
+    display: inline-block;
+    opacity: 0;
+    margin-left: 10px;
+    content: ']';
+    transform: translateX(-20px);
+    transition: transform 0.3s, opacity 0.2s;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

@@ -1,4 +1,10 @@
-h1 {
+a {
   font-family: $heading-font;
   color: $white;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    outline: none;
+  }
 }
