@@ -61,6 +61,21 @@ $retina-suffix: '@2x';
     }
   }
 }
+
+/**
+ * Background PNG and retina fallback
+ */
+$image-path: '../images' !default;
+$retina-suffix: '@2x';
+@mixin hires-image($name, $size:false){
+  background-image: url(#{$image-path}/#{$name}.png);
+  @if($size){
+    background-size: $size;
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.png);
+  }
+}
 /* 
   Hovering animation
 */
