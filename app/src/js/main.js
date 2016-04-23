@@ -109,8 +109,8 @@ $(document).ready(function () {
     heightOffset = $(window).innerHeight() * 0.75;
   });
   // update emoticon based on spotify interaction
-  $('.spotify__playlist').click(function(e){
-    console.log('clicked');
+  $('.btn--spotify').click(function(e){
+    e.preventDefault();
     $('.earth-emoticon--animation').toggleClass('earth-emoticon--hands');
   });
 

@@ -13,6 +13,9 @@
     @include mdShadowLevel(2);
     background-color: lighten( $accent-color, 5% )
   }
+  &:active{
+    @include mdShadowLevel(0);
+  }
 }
 
 .btn--small {

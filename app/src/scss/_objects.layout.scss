@@ -4,7 +4,7 @@
 }
 
 .layout__item {
-  margin: 0 10px;
+  margin: 50px 10px;
 }
 
 .layout__item--full {
@@ -21,4 +21,8 @@
 
 .layout__item--third {
   width: calc(33.3% - 20px);
+}
+
+.layout__iframe--full{
+  width: 100%;
 }

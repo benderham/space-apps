@@ -29,6 +29,7 @@
   transform: translate3D(0px, 0px, 0);
   animation: hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
   position: relative;
+  margin-top: -150px;
   &:after,
   &:before{
     content: "";
@@ -38,12 +39,12 @@
     width: 100%;
     height: 100%;
   };
+  &:after{
+    animation: earthAnimation 5000ms steps(4) infinite;
+    backface-visibility: hidden;
+  }
   &.earth-emoticon--hands{
     position: relative;
-    &:after{
-      animation: earthAnimation 5000ms steps(4) infinite;
-      backface-visibility: hidden;
-    }
     &:before{
       transform-origin: 10% 80%;
       animation: earthHandsAnimation 2000ms alternate infinite;
@@ -51,6 +52,7 @@
   }
 }
 .earth-emoticon--angry{
+  margin-top: 0px;
   &:after{
     background: url("../svg/angryearth.svg") no-repeat;
   }
