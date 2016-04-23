@@ -1,0 +1,13 @@
+.earth-emoticon--animation{
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/walk-ing4.svg") no-repeat;
+  width: 182px;
+  height: 266px;
+  transform: translate3D(0px, 0px, 0);
+  animation: earthAnimation 750ms steps(9) infinite;
+  backface-visibility: hidden;
+}
+
+
+@keyframes earthAnimation {
+  100% { background-position: 0 -2376px; }
+}
