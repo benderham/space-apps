@@ -1,13 +1,46 @@
+.earth-emoticon--container{
+  overflow: hidden;
+  width: 500px;
+  position: relative;
+  &:after{
+    content: "";
+    background: rgba(0, 0, 0, 0.33);
+    width: 150px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 50%;
+    filter: blur(2px);
+  }
+}
 .earth-emoticon--animation{
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/walk-ing4.svg") no-repeat;
-  width: 182px;
-  height: 266px;
+  width: 2000px;
+  height: 500px;
   transform: translate3D(0px, 0px, 0);
-  animation: earthAnimation 750ms steps(9) infinite;
+  animation: earthAnimation 5000ms steps(4) infinite;
+  animation: earthAnimation 5000ms steps(4) infinite, hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
   backface-visibility: hidden;
 }
-
+.earth-emoticon--angry{
+  background: url("../svg/angryearth.svg") no-repeat;
+}
+.earth-emoticon--happy{
+  background: url("../svg/happyearth.svg") no-repeat;
+}
+.earth-emoticon--sick{
+  background: url("../svg/sickearth.svg") no-repeat;
+}
 
 @keyframes earthAnimation {
-  100% { background-position: 0 -2376px; }
+  0% { background-position: 0px 0 }
+  98.4375% { background-position: 0px 0 } // 100 / 64 * 63
+  100% { background-position: -2000px 0 }
+}
+
+@keyframes hoverAnimation {
+  0% { transform: translate(0, 0px)}
+  100% { transform: translate(0, -50px) }
 }
