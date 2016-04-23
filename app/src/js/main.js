@@ -5,4 +5,7 @@ $(document).ready(function () {
     $('html,body').scrollTo(this.hash,this.hash); 
   });
   
+
+  $(".page-head").headroom();
+
 });

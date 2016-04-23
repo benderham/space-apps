@@ -4,8 +4,17 @@
   justify-content: center;
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: $dark-primary-color;
   @include mdShadowLevel(1);
   z-index: 100;
+  transition: all 0.3s;
+}
+
+.headroom--unpinned {
+  opacity: 0;
+}
+
+.headroom--not-top {
+  height: 40px;
 }

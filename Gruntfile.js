@@ -145,7 +145,7 @@ module.exports = function(grunt) {
   	      'bower_components/jquery/dist/jquery.js',
   	      'bower_components/modernizr/modernizr.js',
           'bower_components/jquery.scrollTo/jquery.scrollTo.js',
-	      	'<%= globalConfig.src  %>/js/vendor/vendor.js'
+	      	'<%= globalConfig.src  %>/js/vendor/*.js'
 	      ],
 	      dest: '<%= globalConfig.build %>/js/vendor.js',
 	    }
