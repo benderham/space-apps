@@ -56,6 +56,7 @@ $(document).ready(function () {
     scaleShowGridLines: false
   });
 
+  // make earth emoticon stick to top right when scrolling
   var heightOffset = $(window).innerHeight() * 0.75;
   $( window ).scroll(function(e) {
     if ( $(this).scrollTop() > heightOffset) {
@@ -67,4 +68,11 @@ $(document).ready(function () {
   $(window).resize(function(){
     heightOffset = $(window).innerHeight() * 0.75;
   });
+
+  $('.spotify__playlist').click(function(e){
+    console.log('clicked');
+    $('.earth-emoticon--animation').toggleClass('earth-emoticon--hands');
+  });
+
+
 });
