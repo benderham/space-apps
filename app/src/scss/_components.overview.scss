@@ -1,6 +1,8 @@
 .overview {
   background: $primary-color;
-  padding-top: 60px;
+  .content{
+    padding-top: 60px;
+  }
   .layout__item{
     display: flex;
     flex-direction: column;
