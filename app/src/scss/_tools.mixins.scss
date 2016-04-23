@@ -61,3 +61,24 @@ $retina-suffix: '@2x';
     }
   }
 }
+
+/**
+ * Material Design Style Shadoes
+ * Takes arguments 0 to 5, 0 being just no shadow.
+ * usage:   @include mdShadowLevel(1);
+ */
+@mixin mdShadowLevel($level) {
+  @if ($level == 5) {
+    box-shadow: 0px 40px 70px 0px rgba(0, 0, 0, 0.22),0px 27px 24px 0px rgba(0, 0, 0, 0.2);
+  } @else if ($level == 4){
+    box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.21),0px 16px 28px 0px rgba(0, 0, 0, 0.22);
+  } @else if ($level == 3){
+    box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19),0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+  } @else if ($level == 2){
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19),0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+  }  @else if ($level == 1){
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.16),0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  } @else{ // Aka Level 0:
+    box-shadow: none;
+  } 
+}
