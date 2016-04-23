@@ -25,7 +25,7 @@
 }
 
 .country-selection{
-  p{
+  p {
     text-align: center;
   }
 }
@@ -33,4 +33,9 @@
 .overview__heading {
   text-align: center;
   color: $white;
+}
+
+.overview--angry {
+  background: #e53935; /* fallback for old browsers */
+  background: linear-gradient(to top, #e53935 , #e35d5b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
 }

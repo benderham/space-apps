@@ -3,3 +3,8 @@
   margin: 0 auto;
   padding: 15px 0;
 }
+
+.content__lead {
+  text-align: center;
+  @include font-size(20px);
+}

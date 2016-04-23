@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   padding: 10px 30px;
-  background: $accent-color;
+  background-color: $accent-color;
   text-transform: uppercase;
   letter-spacing: 1px;
   @include mdShadowLevel(1);
@@ -11,11 +11,24 @@
 
   &:hover {
     @include mdShadowLevel(2);
-    background: lighten( $accent-color, 5% )
+    background-color: lighten( $accent-color, 5% )
   }
 }
 
 .btn--small {
   padding: 10px 15px;
   @include font-size(16px);
+}
+
+.btn--spotify {
+  padding: 15px 15px 15px 55px;
+  background-image: url('../svg/spotify.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 12px;
+  background-size: 30px 30px;
+
+  &:hover {
+    background-size: 30px 30px;
+    background-position: 10px 12px;
+  }
 }

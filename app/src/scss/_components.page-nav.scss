@@ -42,10 +42,17 @@
 }
 
 .logo {
+  margin-top: 50px;
   width: 100px;
   height: 83px;
   @include hires-image(logo);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   @include hide-text();
+}
+
+.headroom--not-top .logo {
+  margin-top: 20px;
+  width: 67px;
+  height: 55px;
 }
