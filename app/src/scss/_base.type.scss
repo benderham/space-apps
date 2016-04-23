@@ -1,3 +1,14 @@
 h1 {
   font-family: $heading-font;
+  text-align: center;
+
+}
+
+h2 {
+  font-family: $heading-font;
+  @include font-size(18px);
+}
+
+p {
+  line-height: 1.6;
 }

@@ -1,17 +1,30 @@
 section#nasa.container.nasa
   div.content
-    h1 NASA Data
-    div.layout
+    h1.visually-hidden NASA Data
+    div.layout        
+      div.layout__item.layout__item--half
+        div.card
+          h2.card__heading Rainfall This Month
+          canvas(id="rainfall-data")
+          
+          div.card__emoticon
+          div.card__content
+            h3 Rainfall Information
+            p Vivamus cursus tortor varius tortor vestibulum fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquet augue. Cras posuere sapien eu malesuada semper. Maecenas suscipit enim nisl, vitae pellentesque turpis fringilla vel. Vestibulum rutrum libero lacus, a faucibus ligula molestie quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras pulvinar eget arcu quis bibendum.
+            a(class="btn btn--small" href="") Learn More
+
+      div.layout__item.layout__item--half
+        div.card
+          h2.card__heading Temperature This Month
+          canvas(id="temp-data")
+          
+          div.card__emoticon
+          div.card__content
+            h3 Temperature Information
+            p Vivamus cursus tortor varius tortor vestibulum fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae aliquet augue. Cras posuere sapien eu malesuada semper. Maecenas suscipit enim nisl, vitae pellentesque turpis fringilla vel. Vestibulum rutrum libero lacus, a faucibus ligula molestie quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras pulvinar eget arcu quis bibendum.
+            a(class="btn btn--small" href="") Learn More
+     
       div.layout__item.layout__item--two-thirds
-        h2 Average Rainfall
-        canvas(id="rainfall-data" class="chart")
+        h2 Current Natural Disasters
       div.layout__item.layout__item--third
-        p Rainfall Emoticon
-      div.layout__item.layout__item--two-thirds
-        p Temperature
-      div.layout__item.layout__item--third
-        p Temperature Emoticon
-      div.layout__item.layout__item--two-thirds
-        p Natural Disaster Alert/Status
-      div.layout__item.layout__item--third
-        p Natural Disasters Alert Emoticon
+        p Natural Disasters Alert Card

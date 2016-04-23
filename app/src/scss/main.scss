@@ -52,6 +52,8 @@
  * - More explicity named e.g .products-list
  */
 @import 'components.buttons';
+@import 'components.card';
+@import 'components.chart';
 @import 'components.content';
 @import 'components.earth-emoticon';
 @import 'components.earth-status';
@@ -71,4 +73,4 @@
  * - Only affect one piece of the DOM at a time
  * - Usually carry !important
  */
-@import 'trumps.example';
+@import 'trumps.helpers';

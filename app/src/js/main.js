@@ -24,40 +24,80 @@ $(document).ready(function () {
   Chart.defaults.global.defaultFontSize = 14;
   Chart.defaults.global.defaultFontSize.defaultFontColor = "#727272";
   Chart.defaults.global.defaultFontSize.defaultFontFamily = "'Cabin', sans-serif";
-  Chart.defaults.global.animationEasing = "easeOutBounce";
-
-  var data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-        {
-          label: "2015",
-          fill: true,
-          backgroundColor: "rgba(33,150,243,0.5)",
-          borderColor: "rgba(33,150,243,1)",
-          data: [65, 59, 80, 81, 56, 55, 40]
+  Chart.defaults.global.legend = false;
+  
+  options = {
+    scales: {
+      xAxes: [{
+        gridLines: {
+          display: false
         },
-        {
-          label: "2016",
-          fill: true,
-          backgroundColor: "rgba(76,175,80,0.5)",
-          borderColor: "rgba(76,175,80, 1)",
-          pointDotRadius: 0,
-          pointDotStrokeWidth: 0,
-          data: [28, 48, 40, 19, 32, 21, 50]
+        ticks: {
+          display: false
         }
+      }],
+      yAxes: [{
+        gridLines: {
+          display: false
+        },
+        ticks: {
+          display: false,
+          beginAtZero: true,
+          fontColor: "#727272"
+        }
+      }]
+    }
+  };
+
+  var rainfallData = {
+    labels: ["May 1", "May 7", "May 14", "May 21", "May 28"],
+    datasets: [
+      {
+        label: "2016",
+        fill: true,
+        backgroundColor: "rgba(33, 150, 243, 0.1)",
+        borderColor: "rgba(33, 150, 243, 1)",
+        pointBorderWidth: 0,
+        pointBorderColor: "rgba(76,175,80,0)",
+        tension: 0,
+        data: [28, 30, 15, 19, 32]
+      }
     ]
   };
 
-  var ctx = document.getElementById("rainfall-data").getContext("2d");
+  var tempData = {
+    labels: ["May 1", "May 7", "May 14", "May 21", "May 28"],
+    datasets: [
+      {
+        label: "2016",
+        fill: true,
+        backgroundColor: "rgba(76,175,80,0.1)",
+        borderColor: "rgba(76,175,80,1)",
+        pointBorderWidth: 0,
+        pointBorderColor: "rgba(76,175,80,0)",
+        tension: 0,
+        data: [28, 30, 15, 19, 32]
+      }
+    ]
+  };
 
-  var myNewChart = new Chart(ctx ,{
+  var rainfallCtx = document.getElementById("rainfall-data").getContext("2d");
+  var tempCtx = document.getElementById("temp-data").getContext("2d");
+
+  var rainfallChart = new Chart(rainfallCtx, {
     type: "line",
-    data: data,
-    scaleShowGridLines: false
+    data: rainfallData,
+    options: options
   });
 
-  // make earth emoticon stick to top right when scrolling
-  var heightOffset = $(window).innerHeight() * 0.75;
+  var tempChart = new Chart(tempCtx, {
+    type: "line",
+    data: tempData,
+    options: options
+  });
+
+
+  var heightOffset = $(window).innerHeight();
   $( window ).scroll(function(e) {
     if ( $(this).scrollTop() > heightOffset) {
       $('.overview .earth-emoticon--container').addClass('stick');

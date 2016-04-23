@@ -1,0 +1,15 @@
+.card { 
+  background: $white;
+  @include mdShadowLevel(1);
+  border-radius: 2px;
+}
+
+.card__heading {
+  background: $dark-primary-color;
+  color: $white;
+  padding: 10px 15px;
+}
+
+.card__content {
+  padding: 0px 30px 15px 30px;
+}
