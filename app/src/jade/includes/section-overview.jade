@@ -3,16 +3,18 @@ section#overview.container.overview
     h1.overview__heading Earth Overview
     div.layout
       div.layout__item.layout__item--third
-        p Search (Country)
+        .country-selection
+          p Search (Country)
+          span.input.input--makiko
+            input.input__field.input__field--makiko#input-16(type="text",placeholder=" ")
+            label.input__label.input__label--makiko(for="input-16")
+              span.input__label-content.input__label-content--makiko Search
       div.layout__item.layout__item--third
-        p Earth Emoticon
         div.earth-emoticon--animation
       div.layout__item.layout__item--third
-        .spotify__playlist
-          .spotify__image
-            img(src="https://i.scdn.co/image/4f3db4c2ed4a90022edab5fd4bf8ca82c3e62b24")
+        .spotify__playlist(style="background-image:url(https://i.scdn.co/image/4f3db4c2ed4a90022edab5fd4bf8ca82c3e62b24)")
           .spotify__playlist-embed
-            <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+            <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:7MPXsjQGsXcLdNz7UxVuVl" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
       div.layout__item.layout__item--full.earth-status
         p.earth-status__text Earth's emotional status
         a(href="#nasa" class="btn earth-status__btn") Find Out Why
