@@ -28,26 +28,79 @@
   height: 500px;
   transform: translate3D(0px, 0px, 0);
   // animation: earthAnimation 5000ms steps(4) infinite;
-  animation: earthAnimation 5000ms steps(4) infinite, hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
-  backface-visibility: hidden;
+  animation: hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
+  position: relative;
+  &:after,
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  };
+  &.earth-emoticon--hands{
+    position: relative;
+    &:after{
+      animation: earthAnimation 5000ms steps(4) infinite;
+      backface-visibility: hidden;
+    }
+    &:before{
+      transform-origin: 10% 80%;
+      animation: earthHandsAnimation 2000ms alternate infinite;
+    }
+  }
 }
 .earth-emoticon--angry{
-  background: url("../svg/angryearth.svg") no-repeat;
+  &:after{
+    background: url("../svg/angryearth.svg") no-repeat;
+  }
+  &.earth-emoticon--hands:before{
+    background: url("../svg/angryhands.svg") no-repeat;
+  }
 }
 .earth-emoticon--happy{
-  background: url("../svg/happyearth.svg") no-repeat;
+  &:after{
+    background: url("../svg/happyearth.svg") no-repeat;
+  }
+  &.earth-emoticon--hands:before{
+    background: url("../svg/happyhands.svg") no-repeat;
+  }
 }
 .earth-emoticon--sick{
-  background: url("../svg/sickearth.svg") no-repeat;
+  &:after{
+    background: url("../svg/sickearth.svg") no-repeat;
+  }
+  &.earth-emoticon--hands:before{
+    background: url("../svg/sickhands.svg") no-repeat;
+  }
 }
 .earth-emoticon--worried{
-  background: url("../svg/worriedearth.svg") no-repeat;
+  &:after{
+    background: url("../svg/worriedearth.svg") no-repeat;
+  }
+  &.earth-emoticon--hands:before{
+    background: url("../svg/worriedhands.svg") no-repeat;
+  }
 }
 .earth-emoticon--shocked{
-  background: url("../svg/shockedearth.svg") no-repeat;
+  &:after{
+    background: url("../svg/shockedearth.svg") no-repeat;
+  }
+  &.earth-emoticon--hands:before{
+    background: url("../svg/shockedhands.svg") no-repeat;
+  }
 }
 
 @keyframes earthAnimation {
   0%, 95% { background-position: 0px 0 } 
   100% { background-position: -2000px 0 }
+}
+@keyframes earthHandsAnimation {
+  0% { 
+    transform: rotate(-5deg)
+  } 
+  100% {
+    transform: rotate(5deg)
+  } 
 }
