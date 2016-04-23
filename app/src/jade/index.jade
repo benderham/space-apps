@@ -38,42 +38,11 @@ html.no-js(lang='en')
           li.page-nav__item
             a(href="#news" class="page-nav__link") News
     
-    include ./includes/section-overview.jade
 
-    section#nasa.container.nasa
-      div.content
-        h1 NASA Data
-        div.layout
-          div.layout__item.layout__item--two-thirds
-            p Rainfall
-          div.layout__item.layout__item--third
-            p Rainfall Emoticon
-          div.layout__item.layout__item--two-thirds
-            p Temperature
-          div.layout__item.layout__item--third
-            p Temperature Emoticon
-          div.layout__item.layout__item--two-thirds
-            p Natural Disaster Alert/Status
-          div.layout__item.layout__item--third
-            p Natural Disasters Alert Emoticon
-    
-    section#social.container.social-media
-      div.content
-        h1 Social Media
-        div.layout
-          div.layout__item.layout__item--two-thirds
-            p Social Media
-          div.layout__item.layout__item--third
-            p Social Media Emoticon
-         
-    section#news.container.news
-      div.content
-        h1 News
-        div.layout
-          div.layout__item.layout__item--two-thirds
-            p News
-          div.layout__item.layout__item--third
-            p News Emoticon
+    include ./includes/section-overview.jade
+    include ./includes/section-nasa.jade
+    include ./includes/section-social-media.jade
+    include ./includes/section-news.jade
 
     footer
   

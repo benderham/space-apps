@@ -1,13 +1,14 @@
-.page-nav {
-
-}
-
 .page-nav__list {
   display: flex;
   justify-content: center;
+  @include reset-list();
 }
 
 .page-nav__item {
   margin: 0 15px;
   list-style: none;
+}
+
+.page-nav__link {
+  text-transform: uppercase;
 }
