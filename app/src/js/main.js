@@ -56,7 +56,7 @@ $(document).ready(function () {
     scaleShowGridLines: false
   });
 
-  var heightOffset = $(window).innerHeight();
+  var heightOffset = $(window).innerHeight() * 0.75;
   $( window ).scroll(function(e) {
     if ( $(this).scrollTop() > heightOffset) {
       $('.earth-emoticon--container').addClass('stick');
@@ -65,6 +65,6 @@ $(document).ready(function () {
     }
   });
   $(window).resize(function(){
-    heightOffset = $(window).innerHeight();
+    heightOffset = $(window).innerHeight() * 0.75;
   });
 });
