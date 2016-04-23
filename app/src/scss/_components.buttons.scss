@@ -1,3 +1,14 @@
 .btn {
-  
+  padding: 10px 30px;
+  background: $accent-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include mdShadowLevel(1);
+  @include font-size(24px);
+  border-radius: 2px;
+  transition: all 0.3s;
+
+  &:hover {
+    @include mdShadowLevel(2);
+  }
 }
