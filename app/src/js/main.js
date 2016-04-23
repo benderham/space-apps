@@ -20,22 +20,30 @@ $(document).ready(function () {
   /**
    * Charts - fake data sets and charts for data.
    */
+  
+  Chart.defaults.global.defaultFontSize = 14;
+  Chart.defaults.global.defaultFontSize.defaultFontColor = "#727272";
+  Chart.defaults.global.defaultFontSize.defaultFontFamily = "'Cabin', sans-serif";
+  Chart.defaults.global.animationEasing = "easeOutBounce";
+
   var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
         {
-            label: "2015",
-            fill: false,
-            backgroundColor: "#2196F3",
-            borderColor: "#2196F3",
-            data: [65, 59, 80, 81, 56, 55, 40]
+          label: "2015",
+          fill: true,
+          backgroundColor: "rgba(33,150,243,0.5)",
+          borderColor: "rgba(33,150,243,1)",
+          data: [65, 59, 80, 81, 56, 55, 40]
         },
         {
-            label: "2016",
-            fill: false,
-            backgroundColor: "#4CAF50",
-            borderColor: "#4CAF50",
-            data: [28, 48, 40, 19]
+          label: "2016",
+          fill: true,
+          backgroundColor: "rgba(76,175,80,0.5)",
+          borderColor: "rgba(76,175,80, 1)",
+          pointDotRadius: 0,
+          pointDotStrokeWidth: 0,
+          data: [28, 48, 40, 19, 32, 21, 50]
         }
     ]
   };
@@ -44,7 +52,8 @@ $(document).ready(function () {
 
   var myNewChart = new Chart(ctx ,{
     type: "line",
-    data: data
+    data: data,
+    scaleShowGridLines: false
   });
 
   var heightOffset = $(window).innerHeight();
