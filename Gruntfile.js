@@ -40,6 +40,11 @@ module.exports = function(grunt) {
         files: ['<%= globalConfig.src %>/scss/**/*.{scss,sass}'],
         tasks: ['sass:develop', 'autoprefixer']
       },
+      // Watch for changes in svgs
+      fonts: {
+        files: ['<%= globalConfig.src %>/svg/**/*.svg'],
+        tasks: ['newer:copy:svg']
+      },
       // Watch for changes in jade
       jade: {
         files: ['<%= globalConfig.src %>/jade/**/*.jade'],
