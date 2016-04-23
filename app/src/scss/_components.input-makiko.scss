@@ -13,9 +13,9 @@
   font-weight: 500;
   &:focus,
   &:not(:placeholder-shown),
-  // &:placeholder-shown,
   &:active{
     float: left;
+    @include mdShadowLevel(1);
   }
 }
 
