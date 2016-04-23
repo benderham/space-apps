@@ -4,7 +4,8 @@ a {
   text-decoration: none;
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus {
     outline: none;
   }
 }
