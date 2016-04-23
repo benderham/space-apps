@@ -27,7 +27,6 @@
   width: 2000px;
   height: 500px;
   transform: translate3D(0px, 0px, 0);
-  // animation: earthAnimation 5000ms steps(4) infinite;
   animation: hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
   position: relative;
   &:after,

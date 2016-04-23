@@ -60,15 +60,15 @@ $(document).ready(function () {
   var heightOffset = $(window).innerHeight() * 0.75;
   $( window ).scroll(function(e) {
     if ( $(this).scrollTop() > heightOffset) {
-      $('.earth-emoticon--container').addClass('stick');
+      $('.overview .earth-emoticon--container').addClass('stick');
     } else {
-      $('.earth-emoticon--container').removeClass('stick');
+      $('.overview .earth-emoticon--container').removeClass('stick');
     }
   });
   $(window).resize(function(){
     heightOffset = $(window).innerHeight() * 0.75;
   });
-
+  // update emoticon based on spotify interaction
   $('.spotify__playlist').click(function(e){
     console.log('clicked');
     $('.earth-emoticon--animation').toggleClass('earth-emoticon--hands');
