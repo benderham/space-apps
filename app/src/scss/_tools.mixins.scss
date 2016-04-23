@@ -61,7 +61,14 @@ $retina-suffix: '@2x';
     }
   }
 }
+/* 
+  Hovering animation
+*/
 
+@keyframes hoverAnimation {
+  0% { transform: translate(0, 0px)}
+  100% { transform: translate(0, -50px) }
+}
 /**
  * Material Design Style Shadoes
  * Takes arguments 0 to 5, 0 being just no shadow.

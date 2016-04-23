@@ -47,4 +47,15 @@ $(document).ready(function () {
     data: data
   });
 
+  var heightOffset = $(window).innerHeight();
+  $( window ).scroll(function(e) {
+    if ( $(this).scrollTop() > heightOffset) {
+      $('.earth-emoticon--container').addClass('stick');
+    } else {
+      $('.earth-emoticon--container').removeClass('stick');
+    }
+  });
+  $(window).resize(function(){
+    heightOffset = $(window).innerHeight();
+  });
 });
