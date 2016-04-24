@@ -43,6 +43,16 @@
     border-radius: 50%;
     filter: blur(2px);
   }
+  .content__lead &{
+    margin: 0;
+    margin-top: -60px;
+    margin-left: -40px;
+    transform: scale(0.4);
+    transform-origin: 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 .earth-emoticon--explanation{
   display: none;
