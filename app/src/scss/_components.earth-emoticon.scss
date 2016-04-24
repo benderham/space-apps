@@ -18,6 +18,13 @@
       margin-left: -50px;
       margin-top: -150px;
     }
+    .earth-emoticon--explanation{
+      display: block;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: center;
+      color: $white;
+    }
     &:after{
       content: none;
     }
@@ -35,6 +42,9 @@
     border-radius: 50%;
     filter: blur(2px);
   }
+}
+.earth-emoticon--explanation{
+  display: none;
 }
 .earth-emoticon--animation{
   width: 2000px;
