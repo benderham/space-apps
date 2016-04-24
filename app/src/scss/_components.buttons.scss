@@ -45,6 +45,6 @@
 
   &:hover {
     background-size: 30px 30px;
-    background-position: 10px 6px;
+    background-position: calc(100% - 10px) 6px;
   }
 }
