@@ -2,4 +2,20 @@
   background-color: $primary-color;
   .content__lead{
   }
+
+  h2,
+  p{
+    color: $white;
+  }
+  p{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .layout__item--full{
+  }
+  .intro-text{
+    
+    margin: 50px 0 0;
+  }
 }
