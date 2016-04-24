@@ -21,6 +21,7 @@ $(document).ready(function () {
    * Charts - fake data sets and charts for data.
    */
   
+  Chart.defaults.global.maintainAspectRatio = true;
   Chart.defaults.global.defaultFontSize = 14;
   Chart.defaults.global.defaultFontSize.defaultFontColor = "#727272";
   Chart.defaults.global.defaultFontSize.defaultFontFamily = "'Cabin', sans-serif";
@@ -30,10 +31,14 @@ $(document).ready(function () {
     scales: {
       xAxes: [{
         gridLines: {
-          display: false
+          display: true,
+          color: "rgba(255, 255, 255, 0.1)",
+          drawOnChartArea: true,
+          drawTicks: false,
+          zeroLineColor: "rgba(255, 255, 255, 0)"
         },
         ticks: {
-          display: false
+          display: false,
         }
       }],
       yAxes: [{
@@ -42,41 +47,43 @@ $(document).ready(function () {
         },
         ticks: {
           display: false,
-          beginAtZero: true,
-          fontColor: "#727272"
         }
       }]
     }
   };
 
   var rainfallData = {
-    labels: ["May 1", "May 7", "May 14", "May 21", "May 28"],
+    labels: ["May 1", "May 7", "May 14", "May 21", "May 28", "May 1", "May 7", "May 14", "May 21", "May 28"],
     datasets: [
       {
         label: "2016",
         fill: true,
-        backgroundColor: "rgba(33, 150, 243, 0.1)",
-        borderColor: "rgba(33, 150, 243, 1)",
+        backgroundColor: "rgba(33,33,33,0.5)",
+        borderColor: "rgba(76,175,80,1)",
+        borderWidth: 8,
         pointBorderWidth: 0,
         pointBorderColor: "rgba(76,175,80,0)",
-        tension: 0,
-        data: [28, 30, 15, 19, 32]
+        tension: 0.3,
+        yAxisID: "y-axis-0",
+        data: [28, 30, 15, 19, 13, 18, 25, 32, 36, 46]
       }
     ]
   };
 
   var tempData = {
-    labels: ["May 1", "May 7", "May 14", "May 21", "May 28"],
+    labels: ["May 1", "May 7", "May 14", "May 21", "May 28", "May 1", "May 7", "May 14", "May 21", "May 28"],
     datasets: [
       {
         label: "2016",
         fill: true,
-        backgroundColor: "rgba(76,175,80,0.1)",
+        backgroundColor: "rgba(33,33,33,0.5)",
         borderColor: "rgba(76,175,80,1)",
+        borderWidth: 8,
         pointBorderWidth: 0,
         pointBorderColor: "rgba(76,175,80,0)",
-        tension: 0,
-        data: [28, 30, 15, 19, 32]
+        tension: 0.3,
+        yAxisID: "y-axis-0",
+        data: [10, 7, 15, 20, 25, 20, 30, 35, 38, 35]
       }
     ]
   };
