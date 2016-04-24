@@ -116,9 +116,27 @@ $(document).ready(function () {
     heightOffset = $(window).innerHeight() * 0.75;
   });
   // update emoticon based on spotify interaction
+  var soundplaying = false;
+  var mp3song = new Audio("mp3/song.mp3");
+  function playsong(){
+    mp3song.play();
+  }
+  function stopsong(){
+    mp3song.pause();
+    mp3song.currentTime = 0;
+  }
+
   $('.btn--spotify, .earth-emoticon--explanation').click(function(e){
     e.preventDefault();
-    $('.earth-emoticon--animation').toggleClass('earth-emoticon--hands');
+    if (soundplaying === false ){
+      soundplaying  = true;
+      $('.earth-emoticon--animation').addClass('earth-emoticon--hands');
+      playsong();
+    } else {
+      stopsong();
+      soundplaying  = false;
+      $('.earth-emoticon--animation').removeClass('earth-emoticon--hands');
+    }
   });
 
 
