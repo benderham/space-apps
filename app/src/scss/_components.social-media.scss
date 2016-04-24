@@ -1,7 +1,13 @@
 .social-media{
-  background-color: $light-primary-color;
+  background-color: $accent-color;
+  .content__lead{
+    background-color: $dark-accent-color;
+  }
   .earth-status__text{
-    color: $primary-text-color;
+    color: $white;
     text-align: center;
+  }
+  h2{
+    color: $white;
   }
 }
