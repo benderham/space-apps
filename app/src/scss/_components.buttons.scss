@@ -35,3 +35,16 @@
     background-position: 10px 6px;
   }
 }
+
+.btn--why {
+  padding: 10px 55px 10px 15px;
+  background-image: url('../svg/arrows.svg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) 6px;
+  background-size: 30px 30px;
+
+  &:hover {
+    background-size: 30px 30px;
+    background-position: 10px 6px;
+  }
+}
