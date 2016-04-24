@@ -4,10 +4,23 @@
   position: relative;
   &.stick{
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     transform: scale(0.5);
     transform-origin: 100% 00%;
+    background-color: $white;
+    background: rgba($primary-text-color,0.5);
+    width: 400px;
+    border-radius: 4px;
+    @include mdShadowLevel(1);
+    .earth-emoticon--animation{
+      animation: none;
+      margin-left: -50px;
+      margin-top: -150px;
+    }
+    &:after{
+      content: none;
+    }
   }
   &:after{
     content: "";
@@ -29,7 +42,7 @@
   transform: translate3D(0px, 0px, 0);
   animation: hoverAnimation 2000ms alternate infinite cubic-bezier(0.5, 0, 0.5, 1);
   position: relative;
-  margin-top: -150px;
+  margin-top: -100px;
   &:after,
   &:before{
     content: "";
@@ -52,7 +65,8 @@
   }
 }
 .earth-emoticon--angry{
-  margin-top: 0px;
+  margin-top: 45px;
+  margin-bottom: -10px;
   &:after{
     background: url("../svg/angryearth.svg") no-repeat;
   }

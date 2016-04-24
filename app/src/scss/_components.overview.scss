@@ -13,11 +13,23 @@
     align-items: center;
   }
   .layout__item--third{
-
+    margin-top: 10px;
     margin-bottom: 10px;
   }
   .layout__item--full{
     margin-top: 10px;
+  }
+  .earth-tagline{
+    margin-top: 75px;
+    margin-bottom: 0;
+    h2{
+      color: $white;
+      font-size: 2em;
+      margin: 0;
+    }
+  }
+  .earth-status{
+    margin-bottom: 50px;
   }
   .input--makiko{
     font-size: 1.5rem;
