@@ -24,14 +24,14 @@
 }
 
 .btn--spotify {
-  padding: 15px 15px 15px 55px;
+  padding: 10px 15px 10px 55px;
   background-image: url('../svg/spotify.svg');
   background-repeat: no-repeat;
-  background-position: 10px 12px;
+  background-position: 10px 6px;
   background-size: 30px 30px;
 
   &:hover {
     background-size: 30px 30px;
-    background-position: 10px 12px;
+    background-position: 10px 6px;
   }
 }

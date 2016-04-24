@@ -1,42 +1,17 @@
 .overview {
   background: $primary-color;
 
-  .content {
-    padding: 60px 0;
-  }
-
-  .layout__item{
+  .layout__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
     align-items: center;
   }
-  .layout__item--third{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .layout__item--full{
-    margin-top: 10px;
-  }
-  .earth-tagline{
-    margin-top: 75px;
-    margin-bottom: 0;
-    h2{
-      color: $white;
-      font-size: 2em;
-      margin: 0;
-    }
-  }
-  .earth-status{
-    margin-bottom: 50px;
-  }
-  .input--makiko{
-    font-size: 1.5rem;
-  }
 }
 
-.country-selection{
+.country-selection {
+  
   p {
     text-align: center;
   }
@@ -47,7 +22,8 @@
   color: $white;
 }
 
-.overview--angry {
-  background: #e53935; /* fallback for old browsers */
-  background: linear-gradient(to top, #e53935 , #e35d5b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+.overview--worried {
+  background: 
+    linear-gradient(to top, rgba(19,106,138,0.5), rgba(38,120,113,0.5)),
+    url('../images/worried-bg.jpg') no-repeat;
 }
