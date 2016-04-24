@@ -19,8 +19,10 @@
     .earth-emoticon--animation{
       animation: none;
       margin-left: -50px;
-      margin-top: -150px;
-      height: 775px;
+      // margin-top: -150px;
+      // height: 775px;
+      margin-top: -120px;
+      height: 650px;
     }
     .earth-emoticon--explanation{
       display: block;
@@ -30,10 +32,14 @@
       color: $white;
 
       position: absolute;
-      bottom: 0;
       left: 0;
       text-align: center;
       width: 370px;
+
+
+      top: 0;
+
+
       p{
         font-size: 2em;
         margin-top: 0;
@@ -41,8 +47,13 @@
       }
       img{
         max-width: 100%;
+        width: 100%;
+        margin-top: 2em;
       }
-
+      ~ .earth-emoticon--explanation{
+        top: auto;
+        bottom: 0;
+      }
     }
     &:after{
       content: none;
