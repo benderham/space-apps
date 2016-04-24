@@ -14,3 +14,10 @@
     @include font-size(28px);
   }
 }
+
+img.switch{
+  widows: 70px;
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}

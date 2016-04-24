@@ -2,6 +2,11 @@
   background-color: $accent-color;
   .content__lead{
     background-color: $dark-accent-color;
+    p{
+      text-align: left;
+      max-width: none;
+      margin-left: 5em;
+    }
   }
   .earth-status__text{
     color: $white;
@@ -30,6 +35,10 @@
   }
   .layout__item--full{
     margin: 0;
+  }
+  .intro-text{
+    
+    margin: 50px 0 0;
   }
 }
 

@@ -1,6 +1,11 @@
 .news{
   background-color: $primary-color;
   .content__lead{
+    p{
+      text-align: left;
+      max-width: none;
+      margin-left: 5em;
+    }
   }
 
   h2,
