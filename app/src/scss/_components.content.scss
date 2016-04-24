@@ -5,6 +5,10 @@
 }
 
 .content__lead {
+  margin: 0;
+  padding: 30px 0;
   text-align: center;
-  @include font-size(20px);
+  color: $white;
+  background-color: $dark-primary-color;
+  @include font-size(28px);
 }
