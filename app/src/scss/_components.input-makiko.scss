@@ -2,6 +2,8 @@
 .input--makiko {
   overflow: hidden;
   background: $accent-color;
+  border-radius: 2px;
+  height: 41px; 
   @include mdShadowLevel(1);
   // padding: 10px 30px;
 }
@@ -9,9 +11,14 @@
 .input__field--makiko {
   width: 100%;
   background: transparent;
+  font-family: $heading-font;
   color: #797693;
   z-index: 10;
   font-weight: 500;
+  min-width: 200px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  padding: 10px 30px;
   &:focus,
   &:not(:placeholder-shown),
   &:active{
@@ -21,11 +28,16 @@
 }
 
 .input__label--makiko {
+  margin-top: -6px;
   position: absolute;
   width: 100%;
   text-align: left;
   pointer-events: none;
   color: #fff;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  line-height: 0;
+  letter-spacing: 1px;
   &:before{
     content: '';
     position: absolute;
