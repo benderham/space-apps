@@ -5,4 +5,13 @@ footer{
     color: $white;
     text-align: center;;
   }
+
+  a {
+    text-decoration: underline;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
 }
