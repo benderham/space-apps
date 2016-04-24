@@ -6,7 +6,7 @@
 .earth-status__text {
   color: $white; 
   @include font-size(24px);
-  
+  font-family: $secondary-font;
   margin-top: 3em;
   margin-bottom: 3em;
 }
