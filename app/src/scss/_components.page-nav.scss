@@ -43,6 +43,7 @@
 
 .logo {
   margin-top: 50px;
+  margin-right: -2px;
   width: 100px;
   height: 83px;
   @include hires-image(logo);
