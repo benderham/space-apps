@@ -2,6 +2,8 @@
 .input--makiko {
   overflow: hidden;
   background: $accent-color;
+  @include mdShadowLevel(1);
+  // padding: 10px 30px;
 }
 
 .input__field--makiko {
